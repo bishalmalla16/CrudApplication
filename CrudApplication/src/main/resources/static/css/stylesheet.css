@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    background-color: #31708f;
+    width: 100%;
+    height: 70px;
+}
+.headerimg{
+    width: 5%;
+    float: left;
+    height: 70px;
+}
+.headerimg a img{
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.headerinfo{
+    width: 95%;
+    float: left;
+}
+.headerinfo h1{
+    color: #761c19;
+    text-align: center;
+    padding-top: 5px;
+    font-family: "Arial Black";
+}
+.navbar{
+    background-color: lightgray;
+    height: 45px;
+}
+.navbar ul{
+    margin: auto;
+    padding: auto;
+}
+.navbar ul li{
+    float: left;
+    padding-right: 40px;
+    list-style: none;
+}
+.navbar ul li a{
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.myform{
+    width: 50%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 300px;
+}
+.myform a{
+    color: purple;
+    text-decoration: underline;
+}
+
+.regbtn{
+	text-align: center;
+	padding-top: 20px;
+}
+.regbtn a{
+	text-decoration: none;
+	color: white;
+}
+.myfooter{
+    height: 50px;
+    text-align: right;
+    background-color: #4e555b;
+}
+.myfooter h2{
+    font-weight: bold;
+    color: wheat;
+}

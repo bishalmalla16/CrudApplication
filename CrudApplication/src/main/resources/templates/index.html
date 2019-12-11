@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login Page</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/homestyle.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+<body>
+	 <header>
+          <div class="header">
+            <div class="headerimg">
+              <a href="/"><img src="img/logo.png"></a>
+            </div>
+            <div class="headerinfo">
+              <h1>CRUD</h1>
+            </div>
+          </div>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/new">Add Student</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="container col-md-6">
+    	<div class="stdtable">
+    		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th scope="col">Roll No.</th>
+		      <th scope="col">Full Name</th>
+		      <th scope="col">Email</th>
+		      <th scope="col">Action</th>
+		    </tr>
+		  </thead>
+		  
+		  <tbody>
+  			<tr th:each="student : ${studentList}">
+		      <td th:text="${student.roll}" >Roll No.</td>
+		      <td th:text="${student.name}">Full Name</td>
+		      <td th:text="${student.email}">Email</td>
+		      <td>
+		      	<a th:href="@{'/view/'+${student.roll}}"><i class="fas fa-eye"></i></a>
+		      	<a th:href="@{'/edit/'+${student.roll}}"><i class="fas fa-edit"></i></a>
+		      	<a th:href="@{'/delete/'+${student.roll}}"><i class="fas fa-trash"></i></a>		      	
+		      </td>
+	    	</tr>
+		   </tbody>
+		   
+		  
+		</table>
+    	</div>	
+    </div>
+    
+      <footer class="myfooter">
+          <h2>Designed By: Bishal Malla</h2>
+      </footer>
+      
+</body>
+</html>
